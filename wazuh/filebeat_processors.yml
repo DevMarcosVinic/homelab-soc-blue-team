@@ -1,0 +1,9 @@
+# Tuning de ingestão para compatibilidade do mapa de Geolocalização
+processors:
+  - replace:
+      fields:
+        - field: "message"
+          pattern: '"src_ip":'
+          replacement: '"srcip":'
+      ignore_missing: true
+      fail_on_error: false

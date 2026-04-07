@@ -1,0 +1,27 @@
+<group name="cowrie,honeypot,">
+  <rule id="100010" level="8">
+    <decoded_as>json</decoded_as>
+    <field name="eventid">cowrie</field>
+    <description>ALERTA DE HONEYPOT - Atividade detectada: $(eventid)</description>
+  </rule>
+
+  <rule id="100021" level="10" frequency="15" timeframe="120">
+    <if_matched_sid>100010</if_matched_sid>
+    <same_field>src_ip</same_field>
+    <description>HONEYPOT - Bloqueio por Rate Limit</description>
+  </rule>
+
+  <rule id="100022" level="10">
+    <if_sid>100010</if_sid>
+    <field name="input" type="pcre2">wget|curl|rm|chmod|nc</field>
+    <description>HONEYPOT - Comando Critico Detectado: $(input)</description>
+  </rule>
+</group>
+
+<group name="suricata, tuning,">
+  <rule id="100020" level="0">
+    <if_sid>86601</if_sid>
+    <match>STUN Binding</match>
+    <description>Tuning: Silenciando trafego legitimo da VPN Tailscale</description>
+  </rule>
+</group>
