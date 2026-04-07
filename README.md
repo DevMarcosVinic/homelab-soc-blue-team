@@ -30,9 +30,9 @@ O invasor acessou o servidor falso e tentou executar um ataque conhecido como *F
 * **Captura:** O laboratório interceptou o malware (identificado como *komari-agent*) e o colocou em quarentena.
 * **Visibilidade:** O SIEM processou o ataque instantaneamente, gerando um alerta de Nível Crítico (Level 10) e extraindo para o Dashboard exatamente o comando malicioso e o país de origem do ataque.
 
-> *[🖼️ Imagem do mapa de geolocalização aqui - ![Mapa](docs/wazuh-mapa-geo.png)]*
+> *🖼️ Imagem do mapa de geolocalização com o comando malicioso aqui: - ![Mapa](docs/wazuh-mapa-geo.png)*
 
-> *[🖼️ Imagem do alerta com o comando malicioso aqui - ![Alerta](docs/wazuh-alerta-malware.png)]*
+> *🖼️ Imagem do alerta nível 10 aqui: - ![Alerta](docs/wazuh-alerta-malware.png)*
 
 ---
 
