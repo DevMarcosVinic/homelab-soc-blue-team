@@ -13,6 +13,8 @@ Demonstrar a arquitetura, o monitoramento e a resposta a incidentes de uma rede 
 
 Para garantir que o laboratório fosse seguro enquanto "brincava" com fogo na internet, dividi a arquitetura em duas frentes:
 
+> *![Arquitetura do SOC Lab](docs/arquitetura-rede.png)*
+
 1. **A Vitrine (A Isca):** Um servidor intencionalmente vulnerável (Honeypot) exposto à internet para atrair atacantes. Além disso, uma aplicação web de e-commerce simulando falhas reais para estudos de WebSec.
 2. **O Cofre (O Monitoramento):** O cérebro da operação (o SIEM) fica isolado e invisível para a internet. Toda a gestão do laboratório e a comunicação de dados ocorre exclusivamente através de uma rede privada criptografada (VPN Zero-Trust), garantindo que os invasores não consigam acessar a minha infraestrutura real.
 
